@@ -19,13 +19,13 @@ import Foundation
  Make use of your test plan and algorithm to ensure your code is complete.
  
  */
-var inputToProcess : String = ""
 
-// Loop until valid input is received
-while inputToProcess == "" {
+// Get the number of votes to expect
+var votesExpected : Int = Int.min
+repeat {
     
     // Show the prompt
-    print("Ask the question here? ", terminator: "")
+    print("How many votes? ", terminator: "")
     
     // Get the user's input
     var input : String?
@@ -34,16 +34,28 @@ while inputToProcess == "" {
     // Use optional binding to see if the string can be unwrapped (to see if it is not nil)
     if let notNilInput = input {
         
-        // You probably need to add additional checks to be sure the
-        // input received is valid
-        // Add checks as needed...
-        
-        // Save the input given, as we are certain it's what we are looking for now
-        inputToProcess = notNilInput
+        // We have some kind of string, is it an integer?
+        if let integerInput = Int(notNilInput) {
+            
+            // Make sure the input is in the expected range
+            if integerInput >= 1 && integerInput <= 15 {
+                
+                votesExpected = integerInput
+                
+            }
+            
+        }
         
     }
     
+} while votesExpected == Int.min
+
+// Now get the actual votes
+var votes : String = ""
+if let input = readLine() {
+    votes = input
 }
+
 
 /*
  
@@ -55,9 +67,33 @@ while inputToProcess == "" {
  
  */
 
-// Add 'process' code below....
-print("replace with process logic")
-
+// Check that votes provided matches what was suggested by user
+var invalidVotesGiven : Bool = false
+var votesForA : Int = 0
+var votesForB : Int = 0
+if votes.characters.count == votesExpected {
+    
+    // Count the votes
+    for vote in votes.characters {
+        
+        // See what type of votes this is, and track accordingly
+        if vote == "A" {
+            votesForA += 1
+        } else if vote == "B" {
+            votesForB += 1
+        } else {
+            invalidVotesGiven = true
+            break                       // stop counting votes, bad input given
+        }
+        
+    }
+    
+} else {
+    
+    // Problem with votes provided
+    invalidVotesGiven = true
+    
+}
 
 /*
  
@@ -70,5 +106,16 @@ print("replace with process logic")
  */
 
 // Add 'output' code below... replace what is here as needed.
-print("The input given was: \(inputToProcess)")
+if invalidVotesGiven == true {
+    print("Error")
+} else {
+    if votesForA == votesForB {
+        print("Tie")
+    } else if votesForA > votesForB {
+        print("A")
+    } else {
+        print("B")
+    }
+}
+
 

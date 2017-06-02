@@ -23,10 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		815565E51EE1D3E900DA8944 /* A Warmup - 2 - Vote Count – Algorithm.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "A Warmup - 2 - Vote Count – Algorithm.pdf"; sourceTree = "<group>"; };
+		815565E61EE1D43E00DA8944 /* A Warmup - 2 - Vote Count - Test Plan.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "A Warmup - 2 - Vote Count - Test Plan.pdf"; sourceTree = "<group>"; };
 		817AC2C71EC0A59C008A7B44 /* ExamTemplate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExamTemplate; sourceTree = BUILT_PRODUCTS_DIR; };
 		817AC2CA1EC0A59C008A7B44 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		81F16D461EC2810200A526A3 /* A Warmup - 2 - Vote Count - Algorithm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Warmup - 2 - Vote Count - Algorithm.docx"; sourceTree = "<group>"; };
-		81F16D471EC2810200A526A3 /* A Warmup - 2 - Vote Count - Test Plan.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Warmup - 2 - Vote Count - Test Plan.docx"; sourceTree = "<group>"; };
 		81F16D481EC2810200A526A3 /* A Warmup - 2 - Vote Count.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "A Warmup - 2 - Vote Count.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,8 +69,8 @@
 		817AC2D11EC0A5F9008A7B44 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
-				81F16D461EC2810200A526A3 /* A Warmup - 2 - Vote Count - Algorithm.docx */,
-				81F16D471EC2810200A526A3 /* A Warmup - 2 - Vote Count - Test Plan.docx */,
+				815565E51EE1D3E900DA8944 /* A Warmup - 2 - Vote Count – Algorithm.pdf */,
+				815565E61EE1D43E00DA8944 /* A Warmup - 2 - Vote Count - Test Plan.pdf */,
 				81F16D481EC2810200A526A3 /* A Warmup - 2 - Vote Count.pdf */,
 			);
 			name = Documents;
